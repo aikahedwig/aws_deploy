@@ -7,6 +7,7 @@ set :bundle_without, %w{test}.join(':')
 set :rbenv_version, '3.0.1'
 append :linked_files, 'config/secrets.yml'
 set :linked_files, %w{config/secrets.yml .env}
+set :log_level, :debug
 
 
 # Default branch is :master
