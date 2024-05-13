@@ -5,8 +5,11 @@ set :application, "aws_deploy"
 set :repo_url, "https://github.com/aikahedwig/aws_deploy.git"
 # set :bundle_without, %w{test}.join(':')
 set :rbenv_version, '3.0.1'
-append :linked_files, 'config/secrets.yml'
+#append :linked_files, 'config/secrets.yml'
+  # 5
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads} 
 set :linked_files, %w{config/secrets.yml .env}
+set :keep_releases, 5
 set :log_level, :info
 
 after 'deploy:published', 'deploy:seed'   # 9
